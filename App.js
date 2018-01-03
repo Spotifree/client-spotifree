@@ -1,29 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-
-import { StackNavigator } from 'react-navigation'
-import HomeScreen from './src/screens/HomeScreen'
-import LoginScreen from './src/screens/LoginScreen'
-
-const Navigator = StackNavigator({
-  Login: {screen: LoginScreen},
-  Home: {screen: HomeScreen}
-})
-export default class App extends Component<{}> {
+export default class App extends React.Component {
   render() {
     return (
-      <Navigator/>
+      <View style={styles.container}>
+        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
+      </View>
     );
   }
 }
@@ -31,18 +16,8 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#fff',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    justifyContent: 'center',
   },
 });
