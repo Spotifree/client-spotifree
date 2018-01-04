@@ -8,10 +8,18 @@ import SearchScreen from './screens/Search'
 import CollectionScreen from './screens/Collection'
 import WelcomeScreen from './screens/Welcome'
 import Signup1Screen from './screens/Signup1'
+import Signup2Screen from './screens/Signup2'
+import LoginScreen from './screens/Login'
 
 const AppNavigator = StackNavigator({
+  Login: {
+    screen: LoginScreen
+  },
   Signup1: {
     screen: Signup1Screen
+  },
+  Signup2: {
+    screen: Signup2Screen
   },
   Welcome: {
     screen: WelcomeScreen
