@@ -5,9 +5,13 @@ import { StackNavigator } from 'react-navigation'
 import HomeScreen from './screens/Home'
 import BrowseScreen from './screens/Browse'
 import SearchScreen from './screens/Search'
-import MyAccountScreen from './screens/Collection'
+import CollectionScreen from './screens/Collection'
+import WelcomeScreen from './screens/Welcome'
 
 const AppNavigator = StackNavigator({
+  Welcome: {
+    screen: WelcomeScreen
+  },
   Home: {
     screen: HomeScreen
   },
@@ -18,7 +22,7 @@ const AppNavigator = StackNavigator({
     screen: SearchScreen
   },
   Collection: {
-    screen: MyAccountScreen
+    screen: CollectionScreen
   }
 })
 

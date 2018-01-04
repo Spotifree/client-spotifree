@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Text, StyleSheet, Image } from 'react-native'
+import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 
 const resetHome = NavigationActions.reset({
@@ -35,18 +35,18 @@ export default class Menu extends Component {
   render() { 
     return (
       <View style={ styles.menuBar }>
-        <TouchableHighlight style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetHome)}>
+        <TouchableOpacity style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetHome)}>
           <Image source={require('../public/assets/img/home.png')} style={styles.iconMenu} resizeMode={'contain'}/>
-        </TouchableHighlight>
-        <TouchableHighlight style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetBrowse)}>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetBrowse)}>
           <Image source={require('../public/assets/img/browse.png')} style={styles.iconMenu} resizeMode={'contain'}/>
-        </TouchableHighlight>
-        <TouchableHighlight style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetSearch)}>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetSearch)}>
           <Image source={require('../public/assets/img/search.png')} style={styles.iconMenu} resizeMode={'contain'}/>
-        </TouchableHighlight>
-        <TouchableHighlight style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetCollection)}>
+        </TouchableOpacity>
+        <TouchableOpacity style={ styles.menuButton } onPress={() => this.props.navigation.dispatch(resetCollection)}>
           <Image source={require('../public/assets/img/coll.png')} style={styles.iconMenu} resizeMode={'contain'}/>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     )
   }
